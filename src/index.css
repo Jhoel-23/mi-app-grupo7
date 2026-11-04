@@ -1,0 +1,165 @@
+
+:root {
+  font-family: Inter, "Segoe UI", system-ui, -apple-system, sans-serif;
+  color: #253c33;
+  background: #f3f7f5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border-radius: 10px;
+  min-height: 38px;
+  border: 0;
+  font-weight: 650;
+  transition: filter 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+
+button:hover:not(:disabled) {
+  filter: brightness(0.94);
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #48c78e;
+  outline-offset: 3px;
+}
+
+a {
+  color: #108347;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  text-decoration-color: #16a34a;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.25;
+  color: #113e2b;
+}
+
+h1 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 750;
+  letter-spacing: -0.035em;
+  margin: 12px 0 18px;
+}
+
+h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 18px 0 14px;
+}
+
+h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+p {
+  line-height: 1.55;
+}
+
+input,
+select,
+textarea {
+  max-width: 100%;
+  background: #fff;
+  color: #243e32;
+  border: 1px solid #ccdcd4;
+  border-radius: 10px;
+  min-height: 42px;
+  padding: 10px 12px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #16a34a;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.12);
+}
+
+table {
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  width: 100%;
+  min-width: 570px;
+  background: white;
+  border: 1px solid #e3ebe6;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+thead tr {
+  background: #e6f5ec !important;
+}
+
+th {
+  color: #24523b;
+  font-size: 0.84rem;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+td {
+  font-size: 0.9rem;
+  color: #405448;
+}
+
+th,
+td {
+  padding: 13px 15px !important;
+  text-align: left !important;
+  border-bottom: 1px solid #e7eee9 !important;
+}
+
+tbody tr:hover {
+  background: #f5fbf7;
+}
+
+tbody tr:last-child td {
+  border-bottom: none !important;
+}
+
+section,
+article {
+  min-width: 0;
+}

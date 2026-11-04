@@ -1,0 +1,611 @@
+.app-layout {
+  min-height: 100vh;
+  background: #f3f7f5;
+}
+
+.app-body {
+  display: flex;
+  min-height: calc(100vh - 72px);
+}
+
+.app-content {
+  flex: 1;
+  min-width: 0;
+  padding: 24px 28px 48px;
+}
+
+.app-content-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.app-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 72px;
+  padding: 0 26px;
+
+  background: #103c2a;
+  color: #ffffff;
+
+  box-shadow: 0 2px 16px rgba(10, 50, 31, 0.12);
+}
+
+.app-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #ffffff;
+  text-decoration: none;
+
+  font-size: 1.04rem;
+  font-weight: 750;
+  letter-spacing: 0.015em;
+}
+
+.app-brand small {
+  display: block;
+
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #b7dcca;
+}
+
+.app-brand-mark {
+  padding: 10px 9px;
+  border-radius: 11px;
+
+  background: #20ad67;
+  color: #ffffff;
+
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.app-topbar-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-user-dot {
+  display: grid;
+  place-items: center;
+
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+
+  background: #247950;
+
+  font-weight: 700;
+}
+
+.app-user-name {
+  font-size: 0.87rem;
+}
+
+.app-logout {
+  min-height: 34px;
+  padding: 7px 13px;
+
+  background: #ffffff22;
+  color: #ffffff;
+
+  border: 1px solid #ffffff50;
+}
+
+.app-sidebar {
+  position: sticky;
+  top: 72px;
+
+  align-self: flex-start;
+  flex: 0 0 238px;
+
+  width: 238px;
+  min-height: calc(100vh - 72px);
+  padding: 25px 13px;
+
+  background: #ffffff;
+
+  border-right: 1px solid #e0ebe4;
+}
+
+.app-navtitle {
+  margin: 23px 13px 9px;
+
+  color: #7c9486;
+
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.app-navlink {
+  display: block;
+
+  margin: 3px 0;
+  padding: 11px 14px;
+
+  color: #52695c;
+  text-decoration: none;
+
+  border-radius: 9px;
+
+  font-size: 0.87rem;
+  font-weight: 550;
+
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.app-navlink:hover {
+  background: #edf8f1;
+  color: #087440;
+}
+
+.app-navlink.active {
+  background: #e0f6e9;
+  color: #107a40;
+
+  font-weight: 750;
+}
+
+.app-sidebar-footer {
+  margin: 45px 14px 0;
+
+  color: #90a499;
+  font-size: 0.72rem;
+}
+
+.app-content main {
+  width: 100%;
+  max-width: 1160px !important;
+  min-width: 0;
+
+  margin: 0 auto !important;
+  padding: 24px !important;
+
+  background: #ffffff;
+
+  border: 1px solid #e4eee7;
+  border-radius: 16px;
+
+  box-shadow: 0 5px 24px #153f2710;
+
+  font-family: inherit !important;
+}
+
+.app-content main > h1 {
+  margin: 12px 0 10px !important;
+
+  color: #103e2b !important;
+
+  font-size: clamp(1.8rem, 3vw, 2.4rem) !important;
+}
+
+.app-content main > h2 {
+  margin-top: 0 !important;
+}
+
+.app-content main h1 + h2 {
+  margin-bottom: 8px;
+}
+
+.app-content main > p {
+  margin-bottom: 14px;
+}
+
+.app-content main > section {
+  min-width: 0;
+}
+
+.app-content main section:has(> article) {
+  margin-top: 16px;
+}
+
+.app-content main article {
+  background: #ffffff !important;
+
+  border: 1px solid #dfebe2 !important;
+  border-radius: 13px !important;
+
+  box-shadow: 0 2px 8px #123b2410;
+}
+
+.app-content main article h2 {
+  color: #0d7b43 !important;
+}
+
+.app-content main form {
+  max-width: 100%;
+}
+
+.app-content main form label {
+  color: #466653;
+}
+
+.app-content main input,
+.app-content main select,
+.app-content main textarea {
+  min-width: 0;
+}
+
+.app-content main button:not(:disabled) {
+  box-shadow: 0 2px 7px #12452514;
+}
+
+.app-content main button[style*="background"] {
+  font-family: inherit !important;
+}
+
+.app-content main table td {
+  vertical-align: middle;
+}
+
+.app-content main table button {
+  white-space: nowrap;
+}
+
+.app-content main > div[style*="overflow-x"],
+.app-content main div[style*="overflowX"] {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.app-content main a[href="/inicio"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  margin-bottom: 14px;
+
+  color: #198f50;
+  text-decoration: none;
+
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.app-content main a[href="/inicio"]::before {
+  content: "←";
+}
+
+.app-content main p[role="alert"] {
+  margin: 12px 0;
+  padding: 12px 15px;
+
+  background: #fff1f2;
+  color: #b91c1c !important;
+
+  border-radius: 10px;
+}
+
+.login-page {
+  display: grid;
+  place-items: center;
+
+  min-height: 100vh;
+  padding: 24px;
+
+  background: linear-gradient(
+    125deg,
+    #0e3c2a 0%,
+    #135d3a 55%,
+    #168b4d 100%
+  );
+}
+
+.login-card {
+  width: min(100%, 430px);
+  padding: 38px;
+
+  background: #ffffff;
+
+  border-radius: 20px;
+
+  box-shadow: 0 24px 70px #00201255;
+}
+
+.login-logo {
+  display: grid;
+  place-items: center;
+
+  width: 50px;
+  height: 50px;
+
+  margin: 0 auto 18px;
+
+  background: #16a34a;
+  color: #ffffff;
+
+  border-radius: 14px;
+
+  font-weight: 800;
+}
+
+.login-card h2 {
+  margin: 0 0 8px;
+
+  color: #103e2b;
+
+  text-align: center;
+  font-size: 1.55rem;
+}
+
+.login-subtitle {
+  margin: 0 0 30px;
+
+  color: #72847a;
+  text-align: center;
+}
+
+.login-card label {
+  display: block;
+
+  margin: 16px 0 6px;
+
+  color: #365544;
+
+  font-size: 0.85rem;
+  font-weight: 650;
+}
+
+.login-card input {
+  width: 100%;
+  margin: 0;
+}
+
+.login-card button[type="submit"] {
+  width: 100%;
+  margin-top: 24px;
+  padding: 13px;
+
+  background: #16a34a;
+  color: #ffffff;
+}
+
+.login-card [role="alert"] {
+  margin-top: 12px;
+  padding: 12px;
+
+  background: #fff2f2;
+  color: #b91c1c;
+
+  border-radius: 9px;
+  font-size: 0.87rem;
+}
+
+.home-screen {
+  padding: 35px;
+
+  background: #ffffff;
+
+  border: 1px solid #e4eee7;
+  border-radius: 18px;
+
+  box-shadow: 0 5px 24px #153f2710;
+}
+
+.home-eyebrow {
+  color: #159452;
+
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.home-screen h1 {
+  margin: 10px 0;
+
+  font-size: clamp(1.7rem, 3.2vw, 2.6rem);
+}
+
+.home-welcome {
+  color: #476455;
+  font-size: 1.08rem;
+}
+
+.home-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  margin: 29px 0;
+}
+
+.home-actions a {
+  flex: 1 1 220px;
+  text-decoration: none;
+}
+
+.home-app {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 22px;
+
+  color: #ffffff;
+
+  border-radius: 13px;
+
+  font-weight: 750;
+
+  box-shadow: 0 8px 25px #16452a20;
+}
+
+.home-app.farmacia {
+  background: #17a45a;
+}
+
+.home-app.banco {
+  background: #114c35;
+}
+
+.home-app small {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #dcf8e6;
+  font-weight: 400;
+}
+
+.home-roles {
+  padding: 22px;
+
+  background: #f6faf7;
+
+  border: 1px solid #e2eee5;
+  border-radius: 13px;
+}
+
+.home-roles h3 {
+  margin: 0 0 12px;
+}
+
+.home-role {
+  display: inline-flex;
+  gap: 8px;
+
+  margin: 4px 8px 4px 0;
+  padding: 8px 12px;
+
+  background: #e6f6eb;
+  color: #24593c;
+
+  border-radius: 40px;
+
+  font-size: 0.85rem;
+}
+
+.home-signout {
+  margin-top: 22px;
+  padding: 11px 17px;
+
+  background: #fff0f0;
+  color: #b4232d;
+
+  border: 1px solid #ffd6d6;
+}
+
+@media (max-width: 850px) {
+
+  .app-topbar {
+    height: 64px;
+    padding: 0 15px;
+  }
+
+  .app-brand small {
+    display: none;
+  }
+
+  .app-user-name {
+    display: none;
+  }
+
+  .app-body {
+    display: block;
+  }
+
+  .app-sidebar {
+    position: static;
+
+    display: flex;
+    gap: 8px;
+
+    width: 100%;
+    min-height: auto;
+    padding: 9px 12px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    border-right: 0;
+    border-bottom: 1px solid #e0ebe4;
+
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .app-navgroup {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    flex-shrink: 0;
+  }
+
+  .app-navtitle,
+  .app-sidebar-footer {
+    display: none;
+  }
+
+  .app-navlink {
+    flex-shrink: 0;
+    white-space: nowrap;
+
+    margin: 0;
+    padding: 9px 12px;
+  }
+
+  .app-content {
+    padding: 14px;
+  }
+
+  .app-content main {
+    padding: 19px !important;
+  }
+
+  .app-content main section {
+    max-width: 100%;
+  }
+
+  .home-screen {
+    padding: 23px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .app-brand {
+    font-size: 0.92rem;
+  }
+
+  .app-user-dot {
+    display: none;
+  }
+
+  .app-topbar-user {
+    gap: 6px;
+  }
+
+  .app-content {
+    padding: 10px;
+  }
+
+  .app-content main {
+    padding: 16px !important;
+  }
+
+  .home-screen {
+    padding: 18px;
+  }
+
+  .login-card {
+    padding: 25px;
+  }
+
+  .app-content table {
+    min-width: 540px;
+  }
+}
