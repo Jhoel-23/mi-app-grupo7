@@ -74,4 +74,65 @@ git clone https://github.com/Jhoel-23/mi-app-grupo7.git
 cd mi-app-grupo7
 ```
 
-**2.
+**2. Instalar las dependencias**
+
+```bash
+npm ci
+```
+
+**3. Configurar variables de entorno**
+
+Crear un archivo `.env` en la raíz del proyecto:
+
+```env
+DATABASE_URL=TU_CONEXION_POSTGRESQL
+PORT=3001
+JWT_SECRET=TU_CLAVE_SECRETA
+```
+
+**4. Iniciar el backend**
+
+```bash
+node server.js
+```
+
+**5. Iniciar el frontend en otra terminal**
+
+```bash
+npm run dev
+```
+
+Acceder desde el navegador a:
+
+`http://localhost:5173`
+
+## 📂 Estructura del proyecto
+
+```text
+mi-app-grupo7/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── config/
+│   ├── context/
+│   ├── integraciones/
+│   └── modulos/
+├── server.js
+├── package.json
+├── package-lock.json
+├── vite.config.js
+├── index.html
+└── README.md
+```
+
+## 🔒 Seguridad
+
+Las credenciales de Neon y los secretos de autenticación se configuran mediante variables de entorno y no deben publicarse en el repositorio.
+
+Este proyecto está destinado a fines académicos y de demostración.
+
+---
+
+**Proyecto final – Grupo 7**
+
+*FarmaSalud Perú × Banco Andino Perú*
