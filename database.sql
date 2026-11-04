@@ -1,4 +1,5 @@
 -- Grupo 7 - Farmacia con pago bancario
+
 BEGIN;
 
 SET client_encoding = 'UTF8';
