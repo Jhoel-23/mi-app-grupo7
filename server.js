@@ -1206,6 +1206,11 @@ app.post("/api/:modulo/admin/clientes", autenticar, async (req, res) => {
   }
 });
 
-app.listen(process.env.PORT || 3001, () => {
-  console.log("Servidor conectado en el puerto 3001");
-});
+
+if (!process.env.VERCEL) {
+  app.listen(process.env.PORT || 3001, () => {
+    console.log(`Servidor conectado en el puerto ${process.env.PORT || 3001}`);
+  });
+}
+
+export default app;
